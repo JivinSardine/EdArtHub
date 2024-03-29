@@ -15,29 +15,40 @@
     body{
       min-height: 100vh;
       width: 100%;
-      background: #222D32; 
+      background: linear-gradient(rgb(255, 94, 94),rgb(255, 255, 70)); 
       display: flex;
       justify-content: center;
       align-items: center;
     }
+
+    h1{
+
+      margin-bottom: 100px;
+
+
+
+    }
+
+
     #signoutbtn{
       height: 50px;
-      padding: 0 15px;
+      padding: 3px 15px;
       font-size: 17px;
       border: 1px solid #ddd;
       border-radius: 6px;
       outline: none;
-      color: #fff; 
-      background: #009579;
+      color: #080808; 
+      background: #01ff40;
       cursor: pointer;
       transition: 0.4s;
     }
     #signoutbtn:hover{
-      background: #006653;
+      background: #ff0000;
     }
   </style>
 </head>
 <body>
+  <h1>oh no! you'releaving....Are you sure?</h1>
   <input type="button" id="signoutbtn" value="Sign Out">
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>

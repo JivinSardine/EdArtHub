@@ -56,11 +56,62 @@
             bottom: 0;
             width: 100%;
         }
+
+
+      
+
+        img {
+            width: 100px; /* logo style */
+            margin-right: 1200px;
+            top: -10px;
+            margin-left: 40px;
+
+          
+        }
+
+
+        .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #ffffff;
+        text-decoration: none;
+        border: 2px solid #007bff;
+        border-radius: 5px;
+        font-family: Arial, sans-serif;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* CSS for hover effect */
+.button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+
+        h1{
+
+            text-align: justify;
+
+        }
+
+        h2{
+
+            font-size: xx-large;
+            margin-top: -50px;
+
+        }
+
+
+    
     </style>
 </head>
 <body>
     <header>
-        <h1>E-Resources Access</h1>
+        <h1>EdArtDreams</h1>
+        <h2>Premium Resources Access</h2>
+        <img src="logo.png" alt="Description of the image">
     </header>
     <nav>
 
@@ -68,35 +119,74 @@
 
         <a href="Home.html">Home</a>
         <a href="Resources.html">Free-Resources</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+        <a href="About.html">About</a>
+        <a href="Contact.html">Contact</a>
         <a href="signout.html">Logout</a>
     </nav>
     
-       
+    <a href="#" class="button" onclick="goBack()">Go Back</a>
 
-    <!--
+    <script>
+    function goBack() {
+      window.history.back();
+    }
+</script>
+
+    
+    
+
+    <div id="draggable" style="width: 100vw; height: 100vh; background-color: #f0f0f0;">
+        <!-- Content of your website -->
+        <h1>Draggable Website</h1>
+        <p>You can drag this website around.</p>
+      </div>
+      
+      <script>
+      // Get the draggable element
+      var draggable = document.getElementById("draggable");
+      
+      // Initialize variables to store mouse position
+      var offsetX, offsetY;
+      
+      // Function to handle mouse down event
+      function mouseDown(event) {
+        // Calculate offset from mouse position to top-left corner of the element
+        offsetX = event.clientX - draggable.getBoundingClientRect().left;
+        offsetY = event.clientY - draggable.getBoundingClientRect().top;
         
-        "To add an new resources use this code"
+        // Attach event listeners for mouse move and mouse up events
+        document.addEventListener("mousemove", mouseMove);
+        document.addEventListener("mouseup", mouseUp);
+      }
+      
+      // Function to handle mouse move event
+      function mouseMove(event) {
+        // Calculate new position of the draggable element
+        var newX = event.clientX - offsetX;
+        var newY = event.clientY - offsetY;
         
-        <div class="resource-card">
-            <h2>Resource Title 3</h2>
-            <p>Description of the resource goes here.</p>
-            <a href="#">Access Resource</a>
-        </div> 
-    -->
+        // Update position of the draggable element
+        draggable.style.left = newX + "px";
+        draggable.style.top = newY + "px";
+      }
+      
+      // Function to handle mouse up event
+      function mouseUp() {
+        // Remove event listeners for mouse move and mouse up events
+        document.removeEventListener("mousemove", mouseMove);
+        document.removeEventListener("mouseup", mouseUp);
+      }
+      
+      // Attach event listener for mouse down event on the draggable element
+      draggable.addEventListener("mousedown", mouseDown);
+      </script>
 
 
     </div>
- 
- 
-    <!-- should be updated (go back button)   -->
-    <a href="#" onclick="goBack()">Go Back</a>
 
-<script>
-function goBack() {
-  window.history.back();
-}
+    
+ 
+
 </script>
     <footer>
         <p>&copy; 2024 EdArtDreams. All rights reserved.</p>

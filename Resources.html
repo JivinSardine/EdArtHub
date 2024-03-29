@@ -18,6 +18,7 @@
             line-height: 1.6;
             margin: 0;
             padding: 0;
+
         }
         /* Header */
         header {
@@ -83,11 +84,40 @@
             bottom: 0;
             width: 100%;
         }
+
+
+
+        img {
+            width: 100px; /* logo style */
+            margin-right: 1200px;
+            top: -10px;
+            margin-left: 40px;
+
+          
+        }
+
+
+        h1{
+
+            text-align: justify;
+
+        }
+
+        h2{
+
+            font-size: xx-large;
+            margin-top: -50px;
+
+        }
+
+
     </style>
 </head>
 <body>
     <header>
-        <h1>E-Resources Access</h1>
+        <h1>EdArtDreams</h1>
+        <h2>Free Resources</h2>
+        <img src="logo.png" alt="Description of the image">
     </header>
     <nav>
 
@@ -101,14 +131,14 @@
     </nav>
     <div class="container">
         <div class="resource-card">
-            <h2>Wild Animals FlashCards</h2>
-            <p>Description of the resource goes here.</p>
-            <a href="#">Get Resource</a>
+            <h2>Alphabet FlashCards</h2>
+            <p>This free pack of flashcards come with "26 English Alphabet" in an attractive design.</p>
+            <a href="https://www.bing.com/ck/a?!&&p=be471fea194af152JmltdHM9MTcxMTY3MDQwMCZpZ3VpZD0xMjM0ZjI1NC03ZWNkLTZiZTktM2Q0OC1lNjA0N2YyNTZhY2QmaW5zaWQ9NTIzMA&ptn=3&ver=2&hsh=3&fclid=1234f254-7ecd-6be9-3d48-e6047f256acd&psq=yamaha+e343+manual&u=a1aHR0cHM6Ly91c2EueWFtYWhhLmNvbS9maWxlcy9kb3dubG9hZC9vdGhlcl9hc3NldHMvNi8zMjk0NzYvcHNyZTM0M19lbl9vbV9iMC5wZGY&ntb=1">Get Resource</a>
         </div>
         <div class="resource-card">
-            <h2>Domestic Animals FlashCards</h2>
-            <p>Description of the resource goes here.</p>
-            <a href="#">Get Resource</a>
+            <h2>Numbers FlashCards</h2>
+            <p>This free pack of flash cards contains mumerical numbers from 1(one) to 9(nine).</p>
+            <a href="https://www.bing.com/ck/a?!&&p=be471fea194af152JmltdHM9MTcxMTY3MDQwMCZpZ3VpZD0xMjM0ZjI1NC03ZWNkLTZiZTktM2Q0OC1lNjA0N2YyNTZhY2QmaW5zaWQ9NTIzMA&ptn=3&ver=2&hsh=3&fclid=1234f254-7ecd-6be9-3d48-e6047f256acd&psq=yamaha+e343+manual&u=a1aHR0cHM6Ly91c2EueWFtYWhhLmNvbS9maWxlcy9kb3dubG9hZC9vdGhlcl9hc3NldHMvNi8zMjk0NzYvcHNyZTM0M19lbl9vbV9iMC5wZGY&ntb=1">Get Resource</a>
         </div>
        
 
@@ -123,6 +153,51 @@
         </div> 
     -->
 
+
+
+    <div id="draggable" style="width: 100vw; height: 100vh; background-color: #f0f0f0;">
+       
+    
+      </div>
+      <script>
+      // Get the draggable element
+      var draggable = document.getElementById("draggable");
+      
+      // Initialize variables to store mouse position
+      var offsetX, offsetY;
+      
+      // Function to handle mouse down event
+      function mouseDown(event) {
+        // Calculate offset from mouse position to top-left corner of the element
+        offsetX = event.clientX - draggable.getBoundingClientRect().left;
+        offsetY = event.clientY - draggable.getBoundingClientRect().top;
+        
+        // Attach event listeners for mouse move and mouse up events
+        document.addEventListener("mousemove", mouseMove);
+        document.addEventListener("mouseup", mouseUp);
+      }
+      
+      // Function to handle mouse move event
+      function mouseMove(event) {
+        // Calculate new position of the draggable element
+        var newX = event.clientX - offsetX;
+        var newY = event.clientY - offsetY;
+        
+        // Update position of the draggable element
+        draggable.style.left = newX + "px";
+        draggable.style.top = newY + "px";
+      }
+      
+      // Function to handle mouse up event
+      function mouseUp() {
+        // Remove event listeners for mouse move and mouse up events
+        document.removeEventListener("mousemove", mouseMove);
+        document.removeEventListener("mouseup", mouseUp);
+      }
+      
+      // Attach event listener for mouse down event on the draggable element
+      draggable.addEventListener("mousedown", mouseDown);
+      </script>
 
     </div>
     <footer>

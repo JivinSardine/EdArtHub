@@ -31,7 +31,7 @@
             background-color: #666;
             padding: 10px;
             text-align: center;
-            word-spacing: 200px;
+            word-spacing: 170px;
         }
         nav a {
             color: #fff;
@@ -56,11 +56,38 @@
             bottom: 0;
             width: 100%;
         }
+
+        img {
+            width: 100px; /* logo style */
+            margin-right: 1200px;
+            top: -10px;
+            margin-left: 40px;
+
+          
+        }
+
+        h1{
+
+            text-align: justify;
+          
+        }
+
+        h2{
+
+            font-size: xx-large;
+            margin-top: -50px;
+        
+        }
+            
+
     </style>
 </head>
 <body>
     <header>
-        <h1>E-Resources Access</h1>
+        <h1>EdArtDreams</h1>
+        <h2>About Us</h2>
+        
+        <img src="logo.png" alt="Description of the image">
     </header>
     <nav>
 
@@ -86,6 +113,72 @@
         </div> 
     -->
 
+
+
+    <div id="draggable" style="width: 100vw; height: 100vh; background-color: #f0f0f0;">
+        
+        
+        
+        
+        
+        <!-- Content of website -->
+        
+        
+        
+        
+        
+        
+        <h1>Draggable Website</h1>
+        <p>You can drag this website around.</p>
+
+
+
+
+
+
+
+
+      </div>
+      
+      <script>
+      // Get the draggable element
+      var draggable = document.getElementById("draggable");
+      
+      // Initialize variables to store mouse position
+      var offsetX, offsetY;
+      
+      // Function to handle mouse down event
+      function mouseDown(event) {
+        // Calculate offset from mouse position to top-left corner of the element
+        offsetX = event.clientX - draggable.getBoundingClientRect().left;
+        offsetY = event.clientY - draggable.getBoundingClientRect().top;
+        
+        // Attach event listeners for mouse move and mouse up events
+        document.addEventListener("mousemove", mouseMove);
+        document.addEventListener("mouseup", mouseUp);
+      }
+      
+      // Function to handle mouse move event
+      function mouseMove(event) {
+        // Calculate new position of the draggable element
+        var newX = event.clientX - offsetX;
+        var newY = event.clientY - offsetY;
+        
+        // Update position of the draggable element
+        draggable.style.left = newX + "px";
+        draggable.style.top = newY + "px";
+      }
+      
+      // Function to handle mouse up event
+      function mouseUp() {
+        // Remove event listeners for mouse move and mouse up events
+        document.removeEventListener("mousemove", mouseMove);
+        document.removeEventListener("mouseup", mouseUp);
+      }
+      
+      // Attach event listener for mouse down event on the draggable element
+      draggable.addEventListener("mousedown", mouseDown);
+      </script>
 
     </div>
     <footer>
