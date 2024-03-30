@@ -32,7 +32,7 @@
 
     #signoutbtn{
       height: 50px;
-      padding: 3px 15px;
+      padding: 10px 20px;
       font-size: 17px;
       border: 1px solid #ddd;
       border-radius: 6px;
@@ -45,6 +45,28 @@
     #signoutbtn:hover{
       background: #ff0000;
     }
+
+    .button {
+        
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #ffffff;
+        text-decoration: none;
+        border: 2px solid #007bff;
+        border-radius: 5px;
+        font-family: Arial, sans-serif;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* CSS for hover effect */
+.button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+
   </style>
 </head>
 <body>
@@ -53,5 +75,15 @@
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
   <script src="page1.js" type="module"></script>
+
+
+  <a href="#" class="button" onclick="goBack()">Go Back</a>
+
+    <script>
+    function goBack() {
+      window.history.back();
+    }
+</script>
+
 </body>
 </html>
