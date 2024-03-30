@@ -78,6 +78,31 @@
             margin-top: -50px;
         
         }
+
+
+
+
+        .button {
+        position: fixed; /* Position the button relative to the viewport */
+        bottom: 70px; /* Set distance from the bottom */
+        left: 20px; /* Set distance from the left */
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #ffffff;
+        text-decoration: none;
+        border: 2px solid #007bff;
+        border-radius: 5px;
+        font-family: Arial, sans-serif;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* CSS for hover effect */
+.button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
             
 
     </style>
@@ -101,6 +126,15 @@
     </nav>
     
        
+
+    <a href="#" class="button" onclick="goBack()">Go Back</a>
+
+    <script>
+    function goBack() {
+      window.history.back();
+    }
+</script>
+
 
     <!--
         
