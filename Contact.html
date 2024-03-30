@@ -23,7 +23,7 @@
         header {
             background-color: #333;
             color: #fff;
-            padding: 20px;
+            padding: -5px;
             text-align: center;
         }
         /* Navigation */
@@ -58,27 +58,42 @@
         }
 
         img {
-            width: 100px; /* logo style */
+            width: 60px; /* logo style */
             margin-right: 1200px;
-            top: -10px;
-            margin-left: 40px;
+            margin-bottom: 30px;
 
           
         }
 
+        pre{
+
+            font-size: x-large;
+        }
+
+
+        h3{
+            font-size: xx-large;
+
+
+        }
 
         h1{
 
-            text-align: justify;
-
+    
+            position: absolute; /* Position the button relative to the viewport */
+            left: 100px; /* Set distance from the left */
+            top: 55px;
         }
+
 
         h2{
 
             font-size: xx-large;
-            margin-top: -50px;
+            top: 5px;
 
         }
+
+
 
 
 
@@ -103,6 +118,7 @@
     background-color: #0056b3;
     border-color: #0056b3;
 }
+            
 
     </style>
 </head>
@@ -110,20 +126,22 @@
     <header>
         <h1>EdArtDreams</h1>
         <h2>Contact Us</h2>
+        
         <img src="logo.png" alt="Description of the image">
     </header>
     <nav>
 
          <!--  Redirect Page  -->
 
-        <a href="Home.html">Home</a>
-        <a href="Paid resources.html">Paid-Resources</a>
-        <a href="Resources.html">Free-Resources</a>
-        <a href="About.html">About</a>
-        <a href="signout.html">Logout</a>
+         <a href="Home.html">Home</a>
+         <a href="Paid resources.html">Paid-Resources</a>
+         <a href="Resources.html">Free-Resources</a>
+         <a href="About.html">About</a>
+         <a href="signout.html">Logout</a>
     </nav>
     
-  
+       
+
     <a href="#" class="button" onclick="goBack()">Go Back</a>
 
     <script>
@@ -131,6 +149,7 @@
       window.history.back();
     }
 </script>
+
 
     <!--
         
@@ -144,16 +163,23 @@
     -->
 
 
+
     <div id="draggable" style="width: 100vw; height: 100vh; background-color: #f0f0f0;">
         
         
         
         
+        
         <!-- Content of website -->
+        
+        
+        
+        
+        
+        
+        <h3>Draggable Website</h3>
+        <pre>You can drag this website around.</pre>
 
-
-        <h1>Draggable Website</h1>
-        <p>You can drag this website around.</p>
 
 
 
