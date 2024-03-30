@@ -77,6 +77,7 @@
     pre{
 
         font-size: x-large;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
 
 
@@ -122,7 +123,7 @@
 
 
 
-    <div id="draggable" style="width: 100vw; height: 100vh; background-color: #f0f0f0;">
+   
         
         
         
@@ -131,57 +132,36 @@
         
         <!-- Content of website -->
         <h3>What is EdArtDreams?</h3>
-        <pre> At EdArtDreams we believe in the power of innovation to transform industries and improve lives. Established in 2024
- we have been at the forefront of Educational Art industry since our inception,
- driven by a passion for excellence and a commitment to pushing boundaries.</pre>
+        <pre>        At EdArtDreams we believe in the power of innovation to transform industries and improvelives. Established in 2024 
+       we have been at the forefront of Educational Art industry since our inception, driven by a passion for excellence and a 
+       commitment to pushing boundaries.</pre>
+       <h3>Discover the Power of Flash Cards!</h3>
+        <pre>      At EdArtDreams, we believe in the transformative power of learning through flash cards. Whether you're a 
+      student striving for academic excellence or a professional looking to enhance your skills, our platform is your gateway 
+      to effective and efficient learning.</pre>
+        <h3>Why Choose EdArtDreams?</h3>
+        <pre>      •> Tailored Flash Card Sets:  Access a vast library of meticulously curated flash card sets covering a wide range of 
+      subjects and topics.</pre>
+        <pre>      •> Interactive Learning Experience:  Engage in dynamic learning experiences through our interactive flash cards, 
+      designed to stimulate your memory and enhance retention.</pre>
+        <pre>      •> Attractive 3D Images: 3D images aim to simulate reality by accurately portraying lighting, textures, shadows,
+       and perspectives. Realistic rendering techniques enhance the visual appeal and believability of the images..</pre>
 
 
 
 
+                         <!-- dont edit this is to avoid text hiding under footer -->
+
+      <pre>      •> Interactive Learning Experience: Engage in dynamic learning experiences through our interactive flash cards, 
+        designed to stimulate your memory and enhance retention.</pre> 
+
+                                     <!-- Content of website ENDS -->
 
 
-      </div>
+
+   
       
-      <script>
-      // Get the draggable element
-      var draggable = document.getElementById("draggable");
-      
-      // Initialize variables to store mouse position
-      var offsetX, offsetY;
-      
-      // Function to handle mouse down event
-      function mouseDown(event) {
-        // Calculate offset from mouse position to top-left corner of the element
-        offsetX = event.clientX - draggable.getBoundingClientRect().left;
-        offsetY = event.clientY - draggable.getBoundingClientRect().top;
-        
-        // Attach event listeners for mouse move and mouse up events
-        document.addEventListener("mousemove", mouseMove);
-        document.addEventListener("mouseup", mouseUp);
-      }
-      
-      // Function to handle mouse move event
-      function mouseMove(event) {
-        // Calculate new position of the draggable element
-        var newX = event.clientX - offsetX;
-        var newY = event.clientY - offsetY;
-        
-        // Update position of the draggable element
-        draggable.style.left = newX + "px";
-        draggable.style.top = newY + "px";
-      }
-      
-      // Function to handle mouse up event
-      function mouseUp() {
-        // Remove event listeners for mouse move and mouse up events
-        document.removeEventListener("mousemove", mouseMove);
-        document.removeEventListener("mouseup", mouseUp);
-      }
-      
-      // Attach event listener for mouse down event on the draggable element
-      draggable.addEventListener("mousedown", mouseDown);
-      </script>
-
+     
 
     </div>
     <footer>

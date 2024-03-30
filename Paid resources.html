@@ -68,6 +68,8 @@
         pre{
 
             font-size: x-large;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
         }
 
 
@@ -93,6 +95,12 @@
 
         }
 
+        h4{
+
+
+            font-size: xx-large;
+        }
+
 
 
 
@@ -113,6 +121,28 @@
         transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
+
+.getaccess {
+        position: fixed; /* Position the button relative to the viewport */
+        bottom: 70px; /* Set distance from the bottom */
+        right: 20px; /* Set distance from the left */
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #ffffff;
+        text-decoration: none;
+        border: 2px solid #007bff;
+        border-radius: 5px;
+        font-family: Arial, sans-serif;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.getaccess:hover {
+    background-color: #00ff4c;
+    border-color: #ff0303;
+}
+
 /* CSS for hover effect */
 .button:hover {
     background-color: #0056b3;
@@ -125,8 +155,7 @@
 <body>
     <header>
         <h1>EdArtDreams</h1>
-        <h2>
-            Premium Resources Access</h2>
+        <h2>Premium Resources Access</h2>
         
         <img src="logo.png" alt="Description of the image">
     </header>
@@ -153,6 +182,11 @@
 </script>
 
 
+<a href="Purchase.html" class="getaccess">Already purchased click to Get Access</a>
+
+    
+
+
     <!--
         
         "To add an new resources use this code"
@@ -166,7 +200,7 @@
 
 
 
-    <div id="draggable" style="width: 100vw; height: 100vh; background-color: #f0f0f0;">
+   
         
         
         
@@ -179,8 +213,13 @@
         
         
         
-        <h3>Draggable Website</h3>
-        <pre>You can drag this website around.</pre>
+        <h3>Why Premium?</h3>
+        <pre>        In today's information-rich world, the pursuit of knowledge has become a cornerstone of personal and professional 
+        development. With a plethora of resources available at our fingertips, both free and paid, the decision of where to 
+        invest one's resources can be daunting. While free resources undoubtedly offer accessibility, paid resources often 
+        provide a distinct advantage in terms of depth, quality, and support.</pre>
+
+        <h4></h4>
 
 
 
@@ -189,49 +228,9 @@
 
 
 
-      </div>
       
-      <script>
-      // Get the draggable element
-      var draggable = document.getElementById("draggable");
-      
-      // Initialize variables to store mouse position
-      var offsetX, offsetY;
-      
-      // Function to handle mouse down event
-      function mouseDown(event) {
-        // Calculate offset from mouse position to top-left corner of the element
-        offsetX = event.clientX - draggable.getBoundingClientRect().left;
-        offsetY = event.clientY - draggable.getBoundingClientRect().top;
-        
-        // Attach event listeners for mouse move and mouse up events
-        document.addEventListener("mousemove", mouseMove);
-        document.addEventListener("mouseup", mouseUp);
-      }
-      
-      // Function to handle mouse move event
-      function mouseMove(event) {
-        // Calculate new position of the draggable element
-        var newX = event.clientX - offsetX;
-        var newY = event.clientY - offsetY;
-        
-        // Update position of the draggable element
-        draggable.style.left = newX + "px";
-        draggable.style.top = newY + "px";
-      }
-      
-      // Function to handle mouse up event
-      function mouseUp() {
-        // Remove event listeners for mouse move and mouse up events
-        document.removeEventListener("mousemove", mouseMove);
-        document.removeEventListener("mouseup", mouseUp);
-      }
-      
-      // Attach event listener for mouse down event on the draggable element
-      draggable.addEventListener("mousedown", mouseDown);
-      </script>
 
-    </div>
+ 
     <footer>
         <p>&copy; 2024 EdArtDreams. All rights reserved.</p>
     </footer>
