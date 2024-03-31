@@ -1,12 +1,13 @@
 // Initialize Firebase
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
-  };
+  apiKey: "AIzaSyCQx8fwlrjgJPlFmBf8Xsm5zU6XTjcHlnQ",
+  authDomain: "test-54836.firebaseapp.com",
+  databaseURL: "https://test-54836-default-rtdb.firebaseio.com",
+  projectId: "test-54836",
+  storageBucket: "test-54836.appspot.com",
+  messagingSenderId: "187753669530",
+  appId: "1:187753669530:web:bb36a04f95c42f20f51023"
+};
   
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
