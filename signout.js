@@ -6,7 +6,7 @@ signoutBtn.addEventListener('click', () => {
   auth.signOut()
     .then(() => {
       console.log('User signed out successfully');
-      location.href = "Login.html";
+      location.href = "index.html";
     })
     .catch((error) => {
       alert('Error signing out: ', error);
